@@ -1,4 +1,4 @@
-# zipfile-dedupe
+# zipfile-dedup
 This project takes two zipfiles, and dedeupes out duplicate files in the older zip file. Files are considered a match if their timestamps are eual, or exactly 1 hour out which seems to happen across daylight savings zones or time perfiods.
 
 The program grew out of a need of company backup zipfiles growing beyond 200GB and not using disspace on removable drives effectively.
