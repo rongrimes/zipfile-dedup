@@ -3,18 +3,23 @@ This project takes two zipfiles, and dedeupes out duplicate files in the older z
 
 The program grew out of a need of company backup zipfiles growing beyond 200GB and not using disspace on removable drives effectively.
 
-usage: zipfile-dedup.py [-h] --old FILE_1 --recent FILE_2
+## Usage
+`zipfile-dedup.py [-h] --old FILE_1 --recent FILE_2`
 
 Program to deduplicate redundant files using a pair of zip files. Identical files found in both zip files will be de-duped from the a new image of the 'old' file.
 
-optional arguments:
-  -h, --help            show this help message and exit
-  --old FILE_1, -o FILE_1
-                        Old file to be 'de-duped'. The file is not replaced. Typically it would be eplaced manually.
-  --recent FILE_2, -r FILE_2
-                        Recent file used as the most recent master, and will
-                        remain untouched.
+## Optional arguments
+```
+-h, --help            show this help message and exit
+    
+--old FILE_1, -o FILE_1
+                      Old file to be 'de-duped'. The file is not replaced. Typically it would be replaced manually.
+    
+--recent FILE_2, -r FILE_2
+                      Recent file used as the most recent master, and will remain untouched.
+```
 
-example: zipfile-dedup.py -o BackupFiles20181001.zip --recent BackupFiles20181008.zip
+## Example 
+`zipfile-dedup.py -o BackupFiles20181001.zip --recent BackupFiles20181008.zip`
 
-The new file is dropped into /temp/.
+The new file is dropped into `/temp/`.
